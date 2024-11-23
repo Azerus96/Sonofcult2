@@ -17,4 +17,4 @@ ENV PORT=10000
 EXPOSE $PORT
 
 # Изменим команду запуска
-CMD gunicorn --bind 0.0.0.0:$PORT "app:app"
+CMD gunicorn --bind 0.0.0.0:$PORT wsgi:application
