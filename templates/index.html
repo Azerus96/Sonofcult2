@@ -1,0 +1,73 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Китайский покер</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="game-container">
+        <div class="ai-table">
+            <div class="hand-container">
+                <div class="row top-row" data-position="top">
+                    <div class="card-slot" data-index="0"></div>
+                    <div class="card-slot" data-index="1"></div>
+                    <div class="card-slot" data-index="2"></div>
+                </div>
+                <div class="row middle-row" data-position="middle">
+                    <div class="card-slot" data-index="0"></div>
+                    <div class="card-slot" data-index="1"></div>
+                    <div class="card-slot" data-index="2"></div>
+                    <div class="card-slot" data-index="3"></div>
+                    <div class="card-slot" data-index="4"></div>
+                </div>
+                <div class="row bottom-row" data-position="bottom">
+                    <div class="card-slot" data-index="0"></div>
+                    <div class="card-slot" data-index="1"></div>
+                    <div class="card-slot" data-index="2"></div>
+                    <div class="card-slot" data-index="3"></div>
+                    <div class="card-slot" data-index="4"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="startBtn" class="game-button">Начать</button>
+            <button id="okBtn" class="game-button" disabled>Ок</button>
+        </div>
+
+        <div class="player-table">
+            <div class="hand-container">
+                <div class="row top-row" data-position="top">
+                    <div class="card-slot" data-index="0"></div>
+                    <div class="card-slot" data-index="1"></div>
+                    <div class="card-slot" data-index="2"></div>
+                </div>
+                <div class="row middle-row" data-position="middle">
+                    <div class="card-slot" data-index="0"></div>
+                    <div class="card-slot" data-index="1"></div>
+                    <div class="card-slot" data-index="2"></div>
+                    <div class="card-slot" data-index="3"></div>
+                    <div class="card-slot" data-index="4"></div>
+                </div>
+                <div class="row bottom-row" data-position="bottom">
+                    <div class="card-slot" data-index="0"></div>
+                    <div class="card-slot" data-index="1"></div>
+                    <div class="card-slot" data-index="2"></div>
+                    <div class="card-slot" data-index="3"></div>
+                    <div class="card-slot" data-index="4"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="current-cards"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/cards.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/game.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/animations.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/utils.js') }}"></script>
+</body>
+</html>
