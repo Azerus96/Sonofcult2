@@ -6,5 +6,5 @@ services:
     envVars:
       - key: AI_PROGRESS_TOKEN
         sync: false
-    buildCommand: docker build -t chinese-poker .
-    startCommand: docker run -p $PORT:$PORT chinese-poker
+      - key: PORT
+        value: 10000
