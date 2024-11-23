@@ -16,4 +16,5 @@ COPY . .
 ENV PORT=10000
 EXPOSE $PORT
 
-CMD gunicorn --bind 0.0.0.0:$PORT run:app
+# Изменим команду запуска
+CMD gunicorn --bind 0.0.0.0:$PORT "app:app"
