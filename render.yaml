@@ -1,12 +1,10 @@
-# render.yaml
 services:
   - type: web
     name: chinese-poker
-    env: python
-    buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn run:app
+    env: docker
+    dockerfilePath: ./Dockerfile
     envVars:
-      - key: PYTHON_VERSION
-        value: 3.9.0
       - key: AI_PROGRESS_TOKEN
         sync: false
+    buildCommand: docker build -t chinese-poker .
+    startCommand: docker run -p $PORT:$PORT chinese-poker
