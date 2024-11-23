@@ -9,9 +9,4 @@ class Config:
     AI_PROGRESS_TOKEN = os.getenv('AI_PROGRESS_TOKEN')
     PROGRESS_DIR = 'progress'
     SESSION_TYPE = 'filesystem'
-    MAX_CARDS = {
-        'top': 3,
-        'middle': 5,
-        'bottom': 5
-    }
-    GAME_TIMEOUT = 300  # 5 минут на игру
+    PORT = int(os.getenv('PORT', 10000))
